@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: url-shortener
+    runtime: docker
+    envVars:
+      - key: DB_HOST
+        value: aws-0-eu-west-1.pooler.supabase.com
+      - key: DB_PORT
+        value: "6543"
+      - key: DB_NAME
+        value: postgres
+      - key: DB_USER
+        sync: false
+      - key: DB_PASS
+        sync: false
